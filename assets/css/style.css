@@ -13844,6 +13844,96 @@ blockquote {
   text-align: center;
 }
 
+/* FIX FEATURE BOX OVERLAP ON MOBILE */
+@media (max-width: 575px) {
+
+    /* Feature list stack properly */
+    .features {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+        margin-bottom: 35px;
+    }
+
+    .feature-item {
+        padding: 14px 16px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Give WHY badge its own space */
+    .hero-badge {
+        display: inline-block;
+        margin: 20px auto 24px;
+        padding: 10px 18px;
+        font-size: 11px;
+        line-height: 1.4;
+        text-align: center;
+        white-space: normal;
+    }
+
+    /* Prevent content collision */
+    .why-hero,
+    .about-area {
+        padding-top: 60px !important;
+    }
+
+    /* Heading spacing fix */
+    .hero-title {
+        margin-top: 10px;
+        font-size: 28px;
+        line-height: 1.25;
+    }
+}
+/* ================= MOBILE OVERLAP FIX ================= */
+@media (max-width: 576px) {
+
+    /* 1️⃣ Force feature list to stack */
+    .features {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 14px;
+        margin-bottom: 30px;
+    }
+
+    .feature-item {
+        padding: 14px 16px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* 2️⃣ Fix WHY badge overlap */
+    .hero-badge {
+        display: block;
+        width: fit-content;
+        max-width: 90%;
+        margin: 26px auto 30px;
+        padding: 10px 18px;
+        font-size: 11px;
+        line-height: 1.5;
+        text-align: center;
+        white-space: normal;
+    }
+
+    /* 3️⃣ Ensure heading starts AFTER badge_toggle */
+    .hero-title {
+        margin-top: 0;
+        font-size: 28px;
+        line-height: 1.25;
+    }
+
+    /* 4️⃣ Remove any forced heights causing collision */
+    .about-area,
+    .why-hero {
+        height: auto !important;
+        padding-top: 60px !important;
+    }
+
+    /* 5️⃣ Prevent hidden overflow issues */
+    body {
+        overflow-x: hidden;
+    }
+}
+
 /*.why-hero {
   padding: 120px 20px;
   background: radial-gradient(
