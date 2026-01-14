@@ -339,9 +339,11 @@
     <p>Get expert guidance & best price from Gorakhpur</p>
     <form id="callback-form">
     <input type="hidden" name="access_key" value="baad4a84-4324-4285-a6e6-e5289a27de53">
-    <input type="hidden" name="subject" value="Callback Request">
-    <input type="hidden" name="from_name" value="Website Callback Form">
+    <input type="hidden" name="subject" value="The Kindred Travels">
+    <input type="hidden" name="from_name" value="The kindred Travels ">
     <input type="checkbox" name="botcheck" style="display:none;">
+    <input type="hidden" name="location" value="Gorakhpur to Agra">
+
 
     <input type="text" name="name" placeholder="Your Full Name" required>
     <input type="text" name="whatsapp" placeholder="WhatsApp Number" required>
@@ -702,6 +704,11 @@ callbackForm.addEventListener("submit", async function(e) {
         if (data.success) {
             callbackMsg.innerHTML = "✅ Callback request sent!";
             callbackForm.reset();
+
+            setTimeout(() => {
+                callbackMsg.innerHTML = "";
+            }, 2000);
+
         } else {
             callbackMsg.innerHTML = "❌ " + data.message;
         }
