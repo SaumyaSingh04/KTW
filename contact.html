@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.svg">
-    <title>Shared By NULLPHPSCRIPT.COM - Travel & Tour Booking HTML Template</title>
+    <title>Contact The Kindred Travels | Travel Agency Gorakhpur</title>
+    <meta name="description" content="Get in touch with The Kindred Travels in Gorakhpur for taxi bookings, Nepal tours, and travel inquiries. Call or email us for the best travel deals.">
+
     <!-- swiper css -->
     <link rel="stylesheet preload" href="assets/css/plugins/swiper.min.css" as="style">
     <!-- Custom Font css -->
@@ -148,7 +150,13 @@
     <section class="rts-contact-area inner rts-section-gap">
         <div class="container">
             <div class="section-inner body-bg-one radius-10">
-                <form class="contact-form" id="contact-form" method="POST" action="mailer.php">
+                <!--<form class="contact-form" id="contact-form" method="POST" action="mailer.php">-->
+                    <!--<form class="contact-form" id="contact-form">
+                        <input type="hidden" name="access_key" value="baad4a84-4324-4285-a6e6-e5289a27de53">
+                        <input type="hidden" name="subject" value="New Contact Form Message">
+                        <input type="hidden" name="from_name" value="Website Contact Form">
+                        <input type="checkbox" name="botcheck" style="display:none;">
+
                     <h4 class="title">Contact us</h4>
                     <div class="form-inner">
                         <div class="left">
@@ -156,16 +164,14 @@
                                 <label for="name">First Name</label>
                                 <input type="text" id="name" name="name" placeholder="Enter your full name" required>
                             </div>
-                            <!--<div class="single-input-wrapper">
-                                <label for="email">Last Name</label>
-                                <input type="email" id="email" name="email" placeholder="Enter your last name" required>
-                            </div>-->
                             <div class="single-input-wrapper">
                                 <label for="company">Email</label>
                                 <input type="text" id="company" name="company" placeholder="Enter your email" required>
                             </div>
                             <div class="single-input-wrapper">
                                 <label for="website">Phone</label>
+                        
+
                                 <input type="text" id="website" name="website" placeholder="Enter your mobile no." required>
                             </div>
                         </div>
@@ -178,10 +184,52 @@
                                 <button type="submit" class="rts-btn btn-primary with-arrow">SEND MESSAGE <i class="fa-regular fa-arrow-up up-right"></i></button>
                             </div>
                            <div id="form-messages" class="mt-15 cb"></div>
-                           <!--- <p class="desc">Please read our <a href="#"> privacy policy</a> and <a href="#">Cookies policy</a> so you understand how we collect and use your personal data.</p>-->
                         </div>
                     </div>
-                </form>
+                </form>-->
+            <form class="contact-form" id="contact-form">
+    <h4 class="title">Contact us</h4>
+
+    <input type="hidden" name="access_key" value="baad4a84-4324-4285-a6e6-e5289a27de53">
+    <input type="hidden" name="subject" value="New Contact Form Message">
+    <input type="hidden" name="from_name" value="Website Contact Form">
+    <input type="checkbox" name="botcheck" style="display:none;">
+
+    <div class="form-inner">
+        <div class="left">
+            <div class="single-input-wrapper">
+                <label>First Name</label>
+                <input type="text" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="single-input-wrapper">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="single-input-wrapper">
+                <label>Phone</label>
+                <input type="text" name="phone" placeholder="Enter your mobile no." required>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="single-input-wrapper">
+                <label>Your message...</label>
+                <textarea name="message" placeholder="Enter your message here" required></textarea>
+            </div>
+
+            <div class="single-input-wrapper">
+                <button type="submit" class="rts-btn btn-primary with-arrow">
+                    SEND MESSAGE <i class="fa-regular fa-arrow-up up-right"></i>
+                </button>
+            </div>
+
+            <div id="form-messages" class="mt-15 cb"></div>
+        </div>
+    </div>
+</form>
+
             </div>
             <div class="contact-form-content-bottom-wrapper mt--30">
                 <div class="row g-5">
@@ -537,6 +585,40 @@
     <script defer src="assets/js/plugins/isotop.js"></script>
     <script defer src="assets/js/plugins/contact-form.js"></script>
     <script defer src="assets/js/main.js"></script>
+
+
+    <script>
+const form = document.getElementById("contact-form");
+const result = document.getElementById("form-messages");
+
+form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    result.innerHTML = "Sending...";
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            result.innerHTML = "✅ Message sent successfully!";
+            form.reset();
+        } else {
+            result.innerHTML = "❌ " + data.message;
+        }
+
+    } catch (error) {
+        result.innerHTML = "❌ Something went wrong!";
+    }
+});
+</script>
+
 </body>
 
 </html>
