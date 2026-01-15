@@ -18527,32 +18527,16 @@ ul li {
 /* Instagram widget */
 .instagram-widget .instagram-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
-    gap: 8px; /* spacing between images */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 8px; 
 }
 
-/* Each image wrapper */
+
 .instagram-widget .instagram-grid a {
-    /*position: relative;*/
     display: block;
     overflow: hidden;
     border-radius: 6px;
 }
-/* Orange overlay */
-/*.instagram-widget .instagram-grid a::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 146, 12, 0.65);*/ /* ORANGE */
-    /*opacity: 0;
-    transition: opacity 0.35s ease;
-}*/
-
-/* Show overlay on hover */
-/*.instagram-widget .instagram-grid a:hover::after {
-    opacity: 1;
-}*/
-
 
 /* Images */
 .instagram-widget .instagram-grid .insta-img {
@@ -18562,11 +18546,9 @@ ul li {
     transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-/* Hover effect */
 .instagram-widget .instagram-grid a:hover .insta-img {
     transform: scale(1.15);
-    filter: brightness(0.8);
-    
+    filter: brightness(0.8);   
 }
 
 .rts-footer-area-one.kayaking .single-footer-widget-one ul li:hover svg path {
@@ -19125,8 +19107,8 @@ ul li {
 .exclusive-title {
     max-width: 900px;
      margin: 0 auto;
-    margin-top: 100px; /* page se gap */
-    margin-bottom: 90px;  /* niche se gap */
+    margin-top: 100px; 
+    margin-bottom: 90px;  
 }
 
 .exclusive-title .top-label {
@@ -19135,7 +19117,7 @@ ul li {
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1.5px;
-    color: #BA6827; /* Brand Orange */
+    color: #BA6827; 
     text-transform: uppercase;
     
 }
@@ -19149,7 +19131,7 @@ ul li {
 }
 
 .exclusive-title .title span {
-    color: #BA6827; /* Highlighted word */
+    color: #BA6827; 
 }
 
 .exclusive-title .subtitle {
@@ -21601,9 +21583,9 @@ ul li {
 
     .contact-map-area-fluid {
         width: 100%;
-        height: 300px;          /* mobile-friendly height */
+        height: 300px;         
         border-radius: 16px;
-        overflow: hidden;       /* round corners fix */
+        overflow: hidden;      
     }
 
     .contact-map-area-fluid iframe {
@@ -22757,15 +22739,16 @@ ul li {
 .destination-wrapper .content {
   position: absolute;
   z-index: 1;
-  bottom: 40px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   max-width: 228px;
   width: 100%;
+padding-bottom: 10px;
 }
 .destination-wrapper .content .title {
   color: var(--color-white);
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 .destination-wrapper .content .tag {
    background: none;
@@ -22774,7 +22757,7 @@ ul li {
     color: #b46a3b;
     font-weight: 600;
     letter-spacing: 0.4px;
-   
+    margin-top: 2px;
 }
 
 .destination-wrapper-2 {
@@ -27543,7 +27526,6 @@ body {
     margin: 10px 0;
 }
 
-/* TABS */
 .tabs {
     margin: 40px 0;
 }
@@ -27571,7 +27553,6 @@ body {
     border: none;
 }
 
-/* ITINERARY */
 .day-box {
     background: #fff;
     padding: 30px;
@@ -27581,7 +27562,6 @@ body {
 }
 
 
-/* SIDEBAR */
 .sidebar {
     position: sticky;
     top: 30px;
@@ -27627,7 +27607,7 @@ body {
     font-size: 16px;
     font-weight: 600;
 }
-/* BUTTON HOVER */
+
 .enquiry button:hover {
     background: #000;
     color: #fff;
@@ -27896,7 +27876,6 @@ body {
         margin-top: 30px;
     }
 
-    /* 7️⃣ TABS MOBILE TOUCH SAFETY */
     .tabs {
         flex-wrap: wrap;
         gap: 10px;
@@ -27911,18 +27890,15 @@ body {
 /* MOBILE VIEW FIX */
 @media (max-width: 768px) {
 
-  /* Banner overall height reduce */
   .rts-banner-area-one .rts-hero-banner {
     height: 520px; 
   }
 
-  /* Search / content section ko upar lao */
   .rts__section.advance__search__section {
     margin-top: -40px; 
     padding-top: 20px;
   }
 
-  /* Heading spacing reduce */
   .rts-banner-area-one .section-title-area {
     padding-top: 10px;
   }
@@ -28109,13 +28085,4 @@ body {
     max-width: 120px;      
     height: auto;       
     display: block;
-}
-
-
-
-
-
-
-#preloader {
-    display: none !important;
 }
