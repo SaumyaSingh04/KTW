@@ -40,6 +40,32 @@
 }
 
     </style>
+    <style>
+        /* Mobile-specific styling */
+@media (max-width: 768px) {
+    .why-choose-left-image-area .floating-image img,
+    .why-choose-left-image-area .main-image img {
+        width: 100% !important;     
+        max-width: 100% !important;  
+        height: auto !important;     
+        display: block;
+    }
+
+    .why-choose-left-image-area {
+        display: flex;
+        flex-direction: column;     
+        align-items: center;         
+        gap: 15px;                   
+    }
+
+    .floating-image {
+        position: relative;         
+        transform: none !important;  
+        margin: 0 auto;              
+    }
+}
+
+    </style>
 </head>
 
 <body class="home-bg">
