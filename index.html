@@ -203,7 +203,7 @@
      data-wow-delay="0.6s"
      style="text-align:center; margin-top:35px;">
  <!-- BUTTON 1 -->
-    <a href="index.html"
+    <a href="tour.html"
     onmouseover="this.style.background='#ff7a00'; this.style.color='#fff';"
     onmouseout="this.style.background='rgba(255,122,0,0.95)'; this.style.color='#fff';"
        style="
@@ -878,9 +878,9 @@
                         
                     </li>
                     <li class="has-droupdown">
-                        <a href="tour.html" class="main">Tour</a>
+                        <a href="#" class="main">Tour</a>
                         <ul class="submenu mm-collapse">
-                            <li><a class="mobile-menu-link" href="kathmandu.html">Kathmandu</a></li>
+                        <li><a class="mobile-menu-link" href="kathmandu.html">Kathmandu</a></li>
                             <li><a class="mobile-menu-link" href="nepal.html">Nepal</a></li>
                             <li><a class="mobile-menu-link" href="kashmir.html">Kashmir</a></li>
                             <li><a class="mobile-menu-link" href="Ayodhaya.html">Ayodhya</a></li>
@@ -888,6 +888,9 @@
                             <li><a class="mobile-menu-link" href="tour.html">View Details</a></li>
                         </ul>
                     </li>
+                
+                    
+    
                     <li class="has-droupdown">
                         <a href="#" class="main">Destinations</a>
                         <ul class="submenu mm-collapse">
@@ -1054,6 +1057,22 @@
     <script defer src="assets/js/plugins/isotop.js"></script>
     <script defer src="assets/js/plugins/contact-form.js"></script>
     <script defer src="assets/js/main.js"></script>
+
+<!--<script>
+document.querySelectorAll('.menu-arrow').forEach(arrow => {
+    arrow.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const parent = this.closest('.has-droupdown');
+        const submenu = parent.querySelector('.submenu');
+
+        submenu.classList.toggle('show');
+        this.classList.toggle('rotate');
+
+        submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    });
+});
+</script>-->
 
 
 </body>

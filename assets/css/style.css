@@ -25058,7 +25058,6 @@ padding-bottom: 10px;
   .why-choose-left-image-area .floating-image {
     margin-top: 20px;
     position: unset;
-    max-width: 100%;
   }
   .why-choose-left-image-area .floating-image img {
     width: 100%;
@@ -28147,3 +28146,10 @@ body {
         margin-top: 2px;
     }
 }
+
+
+
+
+
+
+
