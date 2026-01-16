@@ -17858,6 +17858,7 @@ ul li {
   position: relative;
   z-index: 1;
 }
+
 .rts-testimonials-area .section-inner .swiper {
   max-width: 1070px;
   margin: auto;
@@ -28114,4 +28115,15 @@ body {
     max-width: 120px;      
     height: auto;       
     display: block;
+}
+
+
+.shine-orange {
+    color: #BA6827;   
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.shine-orange:hover {
+    color: black; 
 }
