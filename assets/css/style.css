@@ -11467,8 +11467,16 @@ body.sal-disabled [data-sal|=flip] {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 110px;
   
 }
+
+.header-style-one .logo-area img {
+    height: 52px;       
+    width: auto;
+    display: block;
+}
+
 .header-style-one-wrapper .left-area {
   display: flex;
   align-items: center;
@@ -11484,6 +11492,22 @@ body.sal-disabled [data-sal|=flip] {
   display: flex;
   justify-content: flex-end;
 }
+@media (max-width: 768px) {
+    .header-style-one {
+        height: 60px;              
+    }
+
+    .header-style-one-wrapper {
+        height: 40px;
+    }
+
+    .header-style-one .logo-area img {
+        height: 40px;              
+    }
+}
+
+
+
 @media only screen and (max-width: 767px) {
   .header-style-one-wrapper .button-area-start .call-us {
     display: none;
@@ -27580,6 +27604,9 @@ body {
     color: black;
     border-radius: 20px;
     padding: 30px;
+}
+.enquiry p{
+  color: #BA6827;
 }
 
 .enquiry input {
